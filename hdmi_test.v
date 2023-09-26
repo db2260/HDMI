@@ -56,7 +56,7 @@ always @(posedge clk_TMDS) TMDS_shift_load <= (TMDS_mod10==4'd9);
 
 always @(posedge clk_TMDS)
 begin
-	TMDS_shift_r   <= TMDS_shift_load ? TMDS_r   : TMDS_shift_red  [9:1];
+	TMDS_shift_r   <= TMDS_shift_load ? TMDS_r   : TMDS_shift_r[9:1];
 	TMDS_shift_g <= TMDS_shift_load ? TMDS_g : TMDS_shift_g[9:1];
 	TMDS_shift_b  <= TMDS_shift_load ? TMDS_b  : TMDS_shift_b[9:1];	
 	TMDS_mod10 <= (TMDS_mod10==4'd9) ? 4'd0 : TMDS_mod10+4'd1;
