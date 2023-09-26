@@ -62,8 +62,8 @@ begin
 	TMDS_mod10 <= (TMDS_mod10==4'd9) ? 4'd0 : TMDS_mod10+4'd1;
 end
 
-OBUFDS OBUFDS_red  (.I(TMDS_shift_red  [0]), .O(TMDSp[2]), .OB(TMDSn[2]));
-OBUFDS OBUFDS_green(.I(TMDS_shift_green[0]), .O(TMDSp[1]), .OB(TMDSn[1]));
-OBUFDS OBUFDS_blue (.I(TMDS_shift_blue [0]), .O(TMDSp[0]), .OB(TMDSn[0]));
+OBUFDS OBUFDS_red  (.I(TMDS_shift_r  [0]), .O(TMDSp[2]), .OB(TMDSn[2]));
+OBUFDS OBUFDS_green(.I(TMDS_shift_g[0]), .O(TMDSp[1]), .OB(TMDSn[1]));
+OBUFDS OBUFDS_blue (.I(TMDS_shift_b [0]), .O(TMDSp[0]), .OB(TMDSn[0]));
 OBUFDS OBUFDS_clock(.I(clk), .O(TMDSp_clk), .OB(TMDSn_clk));
 endmodule
