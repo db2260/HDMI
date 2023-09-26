@@ -1,6 +1,3 @@
-// (c) fpga4fun.com & KNJN LLC 2013-2023
-
-////////////////////////////////////////////////////////////////////////
 module HDMI_test(
 	input pixclk,  // 25MHz
 	output [2:0] TMDSp, TMDSn,
